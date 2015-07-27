@@ -8,7 +8,6 @@ On your Edison, you need to install:
 - ffmpeg: `sudo apt-get install ffmpeg`
 
 On your web server or computer where you want to download the pictures, you need to install:
-- Python
 - [s3cmd] (http://s3tools.org/s3cmd)
 
 ## Setup
@@ -17,6 +16,6 @@ Copy the edison-picture folder to your Edison's directory, and then copy downloa
 In the edison-picture folder, place your [Amazon S3 config options](http://docs.aws.amazon.com/AWSJavaScriptSDK/guide/node-configuring.html) into take-picture.sh, and place your S3 bucket name into both files. In download-pictures-from-aws.sh, place your S3 bucket name, place the correct path to s3cmd and place the directory that you want your pictures to download to.
 
 ## Using it
-To take a picture and upload it to S3, navigate to the edison-picture folder and run `node take-picture-to-aws.js`
+To take a picture and upload it to S3, navigate to the edison-picture folder and run `./take-picture-to-aws.js`
 
-To download all pictures from your bucket to your directory, run `python download-pictures-from-aws.sh`
+To download all pictures from your bucket to your directory, run `./download-pictures-from-aws.sh`

@@ -1,3 +1,5 @@
+#!/usr/bin/env node
+
 var AWS = require('aws-sdk');
 var fs = require('fs');
 var childProcess = require('child_process');
