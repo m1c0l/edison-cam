@@ -5,6 +5,9 @@ var fs = require('fs');
 var childProcess = require('child_process');
 
 
+var s3bucketName = 'myBucket';
+
+
 var imageName = (new Date).getTime() + ".jpeg"; // name our new picture with the time so names are unique
 var decodedImage;
 
@@ -29,7 +32,7 @@ childProcess.exec('ffmpeg -f video4linux2 -i /dev/video0 -vframes 1' + imageName
 
 	var s3bucket = new AWS.S3({
 		params: {
-			Bucket: 'myBucket'
+			Bucket: s3bucketName
 		}
 	});
 
