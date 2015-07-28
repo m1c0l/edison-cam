@@ -5,7 +5,7 @@ var fs = require('fs');
 var childProcess = require('child_process');
 
 
-var s3bucketName = 'myBucket';
+var s3bucketName = 'myBucket'; // change to name of S3 bucket that you will upload pictures to
 
 
 var imageName = (new Date).getTime() + ".jpeg"; // name our new picture with the time so names are unique
