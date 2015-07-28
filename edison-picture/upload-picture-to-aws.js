@@ -1,3 +1,5 @@
+#!/usr/bin/env node
+
 var AWS = require('aws-sdk');
 var fs = require('fs');
 var childProcess = require('child_process');
@@ -6,7 +8,7 @@ var childProcess = require('child_process');
 var imageName = (new Date).getTime() + ".jpeg"; // name our new picture with the time so names are unique
 var decodedImage;
 
-childProcess.exec('./take-picture.sh ' + imageName, function(error, stdout, stderr) {
+childProcess.exec('ffmpeg -f video4linux2 -i /dev/video0 -vframes 1' + imageName, function(error, stdout, stderr) {
 	
 	console.log('stdout: ' + stdout);
 	console.log('stderr: ' + stderr);
