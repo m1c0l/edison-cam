@@ -3,9 +3,9 @@ Attach a webcam to your Intel Edison, then use Edison Cam to take a picture and 
 
 ## Dependencies
 On your Edison, you need to install:
-- Node.js: `sudo apt-get install nodejs`
-- AWS SDK for Node.js: `npm install aws-sdk`
-- ffmpeg: `sudo apt-get install ffmpeg`
+- [Node.js](https://nodejs.org/): `sudo apt-get install nodejs`
+- [AWS SDK for Node.js](http://aws.amazon.com/sdk-for-node-js/): `npm install aws-sdk`
+- [ffmpeg](https://www.ffmpeg.org/): `sudo apt-get install ffmpeg`
 
 On your web server or computer where you want to download the pictures, you need to install:
 - [s3cmd](http://s3tools.org/s3cmd)
